@@ -1,0 +1,25 @@
+.swiperContainer {
+	width: 100%;
+	height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.swiper {
+	width: 500px;
+	height: 500px;
+}
+
+.customPagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.customPaginationItem {
+	width: 30px;
+	height: 20px;
+	margin: 0 5px;
+	cursor: pointer;
+}
