@@ -6,10 +6,26 @@ import styles from "./Swiper.module.css";
 import Image from "next/image";
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {useCallback} from "react";
 
 const SwiperComponent = () => {
+	const onClick = useCallback(() => {
+		const link = document.createElement('a');
+		link.href = '';
+		link.download = '';
+		link.style.display = 'none';
+
+		document.body.appendChild(link);
+
+		link.click();
+
+		document.body.removeChild(link);
+
+	}, [])
+
 	return (
 		<div className={styles.swiperContainer}>
+			<button onClick={onClick}>Download</button>
 			<Swiper
 				className={styles.swiper}
 				lazyPreloadPrevNext={2}
